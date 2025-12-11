@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1em;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+    padding-left: 15px;
+}
+
+.input-section {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.status-message {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    display: none;
+}
+
+.status-message.loading {
+    display: block;
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-message.error {
+    display: block;
+    background: #ffebee;
+    color: #c62828;
+}
+
+.status-message.success {
+    display: block;
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.results-section {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.data-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.anomaly-table tbody tr {
+    border-left: 4px solid #ddd;
+}
+
+.anomaly-table tbody tr.red {
+    border-left-color: #e53935;
+    background: #ffebee;
+}
+
+.anomaly-table tbody tr.orange {
+    border-left-color: #f57c00;
+    background: #fff3e0;
+}
+
+.anomaly-table tbody tr.yellow {
+    border-left-color: #fbc02d;
+    background: #fffde7;
+}
+
+.flag-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.flag-dot.red {
+    background: #e53935;
+}
+
+.flag-dot.orange {
+    background: #f57c00;
+}
+
+.flag-dot.yellow {
+    background: #fbc02d;
+}
+
+.narrative-box {
+    background: #f5f5f5;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    padding: 20px;
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.05em;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .data-table {
+        font-size: 0.9em;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 8px 10px;
+    }
+}

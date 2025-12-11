@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Financial Browser - Stock Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Agentic Financial Browser</h1>
+            <p class="subtitle">AI-Powered Stock Financial Analysis with Mini Browser</p>
+        </header>
+
+        <section class="input-section">
+            <h2>Stock Analysis</h2>
+            <div class="input-group">
+                <label for="symbolInput">Stock Symbol:</label>
+                <input type="text" id="symbolInput" placeholder="e.g., TCS, INFY, AAPL" />
+            </div>
+            <div class="input-group">
+                <label for="marketInput">Market (Optional):</label>
+                <select id="marketInput">
+                    <option value="">Global</option>
+                    <option value="NSE">NSE (India)</option>
+                    <option value="BSE">BSE (India)</option>
+                    <option value="NASDAQ">NASDAQ (USA)</option>
+                    <option value="NYSE">NYSE (USA)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="urlInput">Custom URL (Optional):</label>
+                <input type="text" id="urlInput" placeholder="Custom financial website URL" />
+            </div>
+            <button id="analyzeBtn" class="btn-primary">Run Analysis</button>
+            <div id="statusMessage" class="status-message"></div>
+        </section>
+
+        <section id="resultsSection" class="results-section" style="display: none;">
+            <h2>Financial Metrics (5 Years)</h2>
+            <table id="financialTable" class="data-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Revenue</th>
+                        <th>AR</th>
+                        <th>Cash</th>
+                        <th>Debt</th>
+                        <th>DSO</th>
+                        <th>Cash/AR</th>
+                        <th>Cash/Debt</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Anomaly Flags</h2>
+            <table id="anomalyTable" class="data-table anomaly-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Flag</th>
+                        <th>Condition</th>
+                        <th>Interpretation</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Agentic AI Analysis</h2>
+            <div id="agentNarrative" class="narrative-box"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Agentic Financial Browser | Data fetched via intelligent browsing | Backend: FastAPI + LangChain</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
